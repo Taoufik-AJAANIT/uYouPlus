@@ -117,6 +117,7 @@ jobs:
           cd ${{ github.workspace }}/main
           ls
           mv YouTube.ipa YouTube.zip
+          ls
           unzip -q YouTube.zip
           youtube_version=$(defaults read "$(pwd)/Payload/YouTube.app/Info" CFBundleVersion)
           echo "==> YouTube v$youtube_version downloaded!"
